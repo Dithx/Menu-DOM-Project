@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    gap: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section h1{
+    font-size: 4em;
+}
+
+.btn-filter{
+    background-color: transparent;
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+.img-container{
+    display: grid;
+    /* max-width: 80vw; */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em 0;
+    gap: 4em 1em;
+}
+
+.menu-item{
+    display: flex;
+    width: 500px;
+    height: 10em;
+    gap: 0 20px;
+    padding: 10px;
+}
+
+.menu-item.hidden{
+    display: none;
+}
+
+.menu-item.show{
+    display: flex;
+}
+
+.menu-item img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    /* border: 6px solid #283618; */
+}
+
+.title-food{
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.head-title-food{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #335c67;
+}
+
+.title-food h3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0d1321;
+    opacity: 0.9;
+}
+
+.title-food p{
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+@media (max-width: 1075px) {
+    .img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu-item{
+        width: 700px;
+        height: auto;
+        padding: 0 1em;
+        margin: 0 auto;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+    .menu-item img{
+        width: 100%;
+    }
+
+    .title-food p{
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 700px) {
+
+    .btn-filter{
+        width: 5em;
+        font-size: 0.8em;
+    }
+    .menu-item{
+        width: 500px;
+        margin: 0 auto;
+    }
+    
+    .title-food p{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section h1{
+        font-size: 3em;
+    }
+    .btn-filter{
+        width: 5em;
+        font-size: 0.7em;
+    }
+    .menu-item{
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 400px) {
+    section h1{
+        font-size: 2em;
+    }
+
+    .btn-filter{
+        width: 5em;
+        font-size: 0.7em;
+    }
+
+    .menu-item{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .btn-filter{
+        width: 5em;
+        font-size: 0.6em;
+    }
+
+    .menu-item{
+        width: 300px;
+    }
+}
